@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix Clone</title>
+    <link rel="icon" href="../img/logo_favicon.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body>
+  <header>
+    <nav id="navbar-netflix" class="navbar navbar-expand-lg" style="position: sticky;">
+      <div class="container-fluid">
+        <div class="netflix-row">
+          <div class="left d-flex align-items-center">
+            <a class="navbar-brand" href="../movies.html">
+              <svg class="logo-normal" xmlns="http://www.w3.org/2000/svg" width="120" height="60">
+                <path d="M23.14 41.97c-1.53.27-3.086.35-4.696.564l-4.91-14.385V43.15l-4.374.6V16.26h4.08l5.582 15.593V16.26h4.32zm8.454-15.646l5.743-.08v4.294l-5.743.08v6.387l7.595-.456v4.133l-11.89.94V16.26h11.89v4.294h-7.595zm23.563-5.77H50.7v19.752l-4.294.054V20.553h-4.455V16.26h13.204zm6.978 5.475h5.877v4.294h-5.877v9.742H57.92V16.26h11.997v4.294h-7.783zm14.76 10.278l7.3.376v4.24L72.6 40.36v-24.1h4.294zm10.923 4.91l4.213.322V16.26h-4.213zm23.026-24.958l-5.448 13.07 5.448 14.41-4.83-.778-3.086-7.944-3.14 7.3-4.616-.564 5.528-12.587-4.992-12.91h4.616l2.818 7.22 3.006-7.22z" fill="#d81f26"/>
+              </svg>
+              <img class="logo-responsive" style="height: 40px;" src="../img/netflix_logo_responsive.png" alt="">
+            </a>
+            <div class="nav-netflix">
+              <section>
+                <!-- <button type="button" href="">Home</button> -->
+                <a type="button" class="btn btn-default" href="../movies.html">Home</a>
+                <button type="button">TV Shows</button>
+                <button type="button">Movies</button>
+                <button type="button">News & Popular</button>
+                <button type="button">My List</button>
+              </section>
+            </div>
+            <div class="dropdown-netflix-a dropdown">
+              <button class="dropdown-netflix-b dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                Browse
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                <li><a class="dropdown-item" href="../movies.html">Home</a></li>
+                <li><a class="dropdown-item" href="#">TV Shows</a></li>
+                <li><a class="dropdown-item" href="#">Movies</a></li>
+                <li><a class="dropdown-item" href="#">News & Popular</a></li>
+                <li><a class="dropdown-item" href="#">My List</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="right d-flex align-items-center">
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-light" type="submit"><i class="bi bi-search"></i></button>
+            </form>
+            <i class="bi bi-bell-fill"></i>
+              <section class="dropdown">
+                <button class="btn profile-close" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <a class="navbar-brand item" href="#"><img id="profile" src="../img/profile.png" alt="Perfil del usuario"></a>
+                </button>
+                <div class="dropdown-menu">
+                  <button class="btn btn-danger" type="button" onclick="cerrarSesion()">Cerrar Sesión</button>
+                </div>
+              </section>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+  
+  
+  <!-- Details of Movies-->
+  <main>
+    <section id="info-pelicula">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 col-lg-4 poster mb-3">
+            <img src="https://www.themoviedb.org/t/p/original/oYbnnwd4aekXcIsGtlsDSEwnJrx.jpg" alt="" id="poster">
+          </div>
+          <div class="col nombrePelicula">
+            <h2 id="titulo">Thor: Love and Thunder (2022)</h2>
+            <div class="facts">
+              <span class="certification" id="certification">
+                PG-13
+              </span>
+              <span class="release ms-2 me-2" id="release">
+                8/7/2022 (MX)
+              </span>
+              <span class="genres" id="genres">
+                <i class="bi bi-check2-circle"></i>
+                <a href="/genre/28-accion/movie"> Acción</a>,&nbsp;<a href="/genre/12-aventura/movie">Aventura</a>,&nbsp;<a href="/genre/14-fantasia/movie">Fantasía</a>
+              </span>
+              <span class="runtime ms-2">
+                <i class="bi bi-clock-history me-1"></i>
+                <span id="duration">120 min</span>
+              </span>
+            </div>
+    
+          <!-- <div class="container-a"> -->
+            <div class="circular-progress">
+              <div class="value-container">0%</div>
+              <p class="puntuacion">Puntuación de usuario</p>
+            </div>
+          <!-- </div> -->
+          
+          <div class="row informacion">
+            <h3 class="frase" id="frase">El uno no es el único</h3>
+            <h3 class="vistaGeneral">Vista general</h3>
+            <p class="sinopsis" id="sinopsis">Cuarta película sobre "Thor" del MCU, en la que el Dios del trueno contará con Lady Thor como acompañante, personaje que interpretará Natalie Portman.</p>
+          </div>
+          
+            <div class="row people" id="people">
+              <li class="profile col-6 col-sm-4">
+                <p><a href="#">Taika Waititi</a></p>
+                <p class="character">Director, Writer</p>
+              </li>
+              <li class="profile col-6 col-sm-4">
+                <p><a href="#">Steve Gan</a></p>
+                <p class="character">Characters</p>
+              </li>
+              <li class="profile col-6 col-sm-4">
+                <p><a href="#">Larry Lieber</a></p>
+                <p class="character">Characters</p>
+              </li>
+              <div class="w-100 d-none d-md-block"></div>
+              <li class="profile col-6 col-sm-4">
+                <p><a href="#">Keith Giffen</a></p>
+                <p class="character">Characters</p>
+              </li>
+              <li class="profile col-6 col-sm-4">
+                <p><a href="#">Steve Englehart</a></p>
+                <p class="character">Characters</p>
+              </li>
+              <li class="profile col-6 col-sm-4">
+                <p><a href="#">Jim Starlin</a></p>
+                <p class="character">Characters</p>
+              </li>
+              <div class="w-100 d-none d-md-block"></div>
+              <li class="profile col-6 col-sm-4">
+                <p><a href="#">Bill Mantlo</a></p>
+                <p class="character">Characters</p>
+              </li>
+              <li class="profile col-6 col-sm-4">
+                <p><a href="#">Stan Lee</a></p>
+                <p class="character">Characters</p>
+              </li>
+              <li class="profile col-6 col-sm-4">
+                <p><a href="#">Jack Kirby</a></p>
+                <p class="character">Characters</p>
+                </li>
+                <div class="w-100 d-none d-md-block"></div>
+                <li class="profile col-6 col-sm-4">
+                  <p><a href="#">Jennifer Kaytin Robinson</a></p>
+                  <p class="character">Writer</p>
+                </li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <section id="panelReparto">
+      <div class="container">
+        <h3 class="tituloReparto"> Reparto principal </h3>
+        <div id="cast-scroller" class="scroller-wrap should-fade is-fading">
+          <ol class="reparto scroller" id="reparto">
+            <li class="view-more">
+              <p><a href="#">Ver más<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16"><path fill-rule="evenodd" d="M8.22 2.97a.75.75 0 011.06 0l4.25 4.25a.75.75 0 010 1.06l-4.25 4.25a.75.75 0 01-1.06-1.06l2.97-2.97H3.75a.75.75 0 010-1.5h7.44L8.22 4.03a.75.75 0 010-1.06z"></path></svg></p>
+            </li>
+          </ol>
+        </dv>
+      </div>
+    </section>
+  </main>
+
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+<script src="../js/details.js"></script>
+
+</body>
+</html>

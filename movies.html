@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix Clone</title>
+    <link rel="icon" href="img/logo_favicon.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <header>
+    <nav id="navbar-netflix" class="navbar navbar-expand-lg">
+      <div class="container-fluid">
+        <div class="netflix-row">
+          <div class="left d-flex align-items-center">
+            <a class="navbar-brand" href="#">
+              <svg class="logo-normal" xmlns="http://www.w3.org/2000/svg" width="120" height="60">
+                <path d="M23.14 41.97c-1.53.27-3.086.35-4.696.564l-4.91-14.385V43.15l-4.374.6V16.26h4.08l5.582 15.593V16.26h4.32zm8.454-15.646l5.743-.08v4.294l-5.743.08v6.387l7.595-.456v4.133l-11.89.94V16.26h11.89v4.294h-7.595zm23.563-5.77H50.7v19.752l-4.294.054V20.553h-4.455V16.26h13.204zm6.978 5.475h5.877v4.294h-5.877v9.742H57.92V16.26h11.997v4.294h-7.783zm14.76 10.278l7.3.376v4.24L72.6 40.36v-24.1h4.294zm10.923 4.91l4.213.322V16.26h-4.213zm23.026-24.958l-5.448 13.07 5.448 14.41-4.83-.778-3.086-7.944-3.14 7.3-4.616-.564 5.528-12.587-4.992-12.91h4.616l2.818 7.22 3.006-7.22z" fill="#d81f26"/>
+              </svg>
+              <img class="logo-responsive" style="height: 40px;" src="img/netflix_logo_responsive.png" alt="">
+            </a>
+            <div class="nav-netflix">
+              <section>
+                <button type="button">Home</button>
+                <button type="button">TV Shows</button>
+                <button type="button">Movies</button>
+                <button type="button">News & Popular</button>
+                <button type="button">My List</button>
+              </section>
+            </div>
+            <div class="dropdown-netflix-a dropdown">
+              <button class="dropdown-netflix-b dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                Browse
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                <li><a class="dropdown-item" href="#">Home</a></li>
+                <li><a class="dropdown-item" href="#">TV Shows</a></li>
+                <li><a class="dropdown-item" href="#">Movies</a></li>
+                <li><a class="dropdown-item" href="#">News & Popular</a></li>
+                <li><a class="dropdown-item" href="#">My List</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="right d-flex align-items-center">
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" id="consulta">
+              <button class="btn btn-outline-light" type="button"><i class="bi bi-search" onclick="obtenerPeliculas()"></i></button>
+            </form>
+            <i class="bi bi-bell-fill"></i>
+              <section class="dropdown">
+                <button class="btn profile-close" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <a class="navbar-brand item" href="#"><img id="profile" src="img/profile.png" alt="Perfil del usuario"></a>
+                </button>
+                <div class="dropdown-menu">
+                  <button class="btn btn-danger" type="button" onclick="cerrarSesion()">Cerrar Sesión</button>
+                </div>
+              </section>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+  
+  <!-- Home - Sliders -->
+  <main>
+    <section class="netflix-home">
+      <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="img/movie_background1.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption">
+              <h3 class="titulo">Interstellar</h3>
+              <p class="description">La humanidad está al borde de la extinción y un grupo de astronautas viaja a través de un agujero espacio-temporal en busca de otro planeta habitable.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="img/movie_background2.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption">
+              <h3 class="titulo">Alien, el octavo pasajero</h3>
+              <p class="description">Cuando la tripulación de la nave de carga Nostromo responde a una llamada de emergencia emitida desde un planeta yermo, descubren una forma de vida mortífera que se cría en...</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="img/movie_background3.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption">
+              <h3 class="titulo">Inception</h3>
+              <p class="description">Un ladrón que puede descifrar secretos de los sueños de la gente acepta un último trabajo: una peligrosa misión para sembrar una idea en el subconsciente de un objetivo.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="img/movie_background4.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption">
+              <h3 class="titulo">El Resplandor</h3>
+              <p class="description">Jack Torrance se traslada, junto a su mujer y a su hijo, al impresionante hotel Overlook, en Colorado, para encargarse del mantenimiento del mismo durante la temporada invernal...</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="img/movie_background5.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption">
+              <h3 class="titulo">Mortal Engines</h3>
+              <p class="description">En un nuevo mundo postapocalíptico, una joven y sus amigos rebeldes intentan impedir que la gigantesca ciudad móvil de Londres devore todo a su paso.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="img/movie_background6.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption">
+              <h3 class="titulo">Prometheus</h3>
+              <p class="description">Una pista sobre los orígenes de la humanidad lleva a un grupo de exploradores al espacio exterior, donde deben librar una terrible batalla para salvar el futuro de la raza humana.</p>
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+          <div class="contLeft d-flex mt-2">
+            <button class="btn btn-light m-2 p-2 "><i class="bi bi-play-fill" style="color: black; padding: 0%;"></i> Play Now </button>
+            <button class="btn btn-secondary m-2 p-2 "><i class="bi bi-info-circle" style=" padding: 0%;"></i> More Info</button>
+          </div>
+        </div>
+      </section>
+  
+  <!-- Carousel Netflix - Géneros de Películas (TMDB) -->
+  <!-- SECCIÓN 1: de las ultimas películas estrenadas o de las mejor puntuadas -->
+    <section class="movies default">
+    <h1 class="genre">Estrenos</h1>
+    <div class="carousel-container m-0">
+      <div class="carouselbox" id="estrenos">
+      <!-- 15 Peliculas -->
+     
+    </div>
+    <!-- Flechas para deslizar el contenido -->
+    <input type="hidden" name="sa0" id="sa0" value="0">
+    <input type="hidden" name="sc0" id="sc0" value="0">
+    <a class="arrowLeft sliderButton" onclick="sliderScrollLeft('estrenos','0')"><i class="bi bi-caret-left-fill"></i></a>
+    <a class="arrowRight sliderButton" onclick="sliderScrollRight('estrenos','0')"><i class="bi bi-caret-right-fill"></i></a>
+    </div>
+  </section>
+
+  <div id="generos">
+
+  </div>
+
+  <!-- Section results-->
+  <section style="display: none" class="movies" id="found-result">
+    <h1 class="genre">Resultados</h1>
+    <div class="carousel-container m-0">
+      <div class="carouselbox" id="found">
+      <!-- 15 Peliculas -->
+      
+
+       
+      </div>
+      <input type="hidden" name="safound" id="safound" value="0">
+      <input type="hidden" name="scfound" id="scfound" value="0">
+      <a class="arrowLeft sliderButton" onclick="sliderScrollLeft('found','found')"><i class="bi bi-caret-left-fill"></i></a>
+      <a class="arrowRight sliderButton" onclick="sliderScrollRight('found','found')"><i class="bi bi-caret-right-fill"></i></a>
+    </div>
+  </section>
+
+  <section style="display: none" id="not-found" class="ocult">
+    <div class="alert alert-danger text-center" role="alert">
+      Resultados no encontrados
+    </div>
+  </section>
+  
+  <section class="movies" id="movies-actor">
+    <h1 class="genre mb-3" id="actor_name"> </h1>
+  
+   <a id="movie-to-return">
+    <button type="button" class="btn ms-4 mb-3 px-4" id="regresar">Regresar</button>
+  </a>
+    <div class="carousel-container m-0">
+      <div class="carouselbox" id="found-movies-actor">
+      <!-- 15 Peliculas -->
+ 
+      </div>
+      <input type="hidden" name="safound-movies-actor" id="safound-movies-actor" value="0">
+      <input type="hidden" name="scfound-movies-actor" id="scfound-movies-actor" value="0">
+      <a class="arrowLeft sliderButton" onclick="sliderScrollLeft('found-movies-actor','found-movies-actor')"><i class="bi bi-caret-left-fill"></i></a>
+      <a class="arrowRight sliderButton" onclick="sliderScrollRight('found-movies-actor','found-movies-actor')"><i class="bi bi-caret-right-fill"></i></a>
+    </div>
+  </section>
+ </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-10 mx-auto">
+            <div class="row">
+              <div id="social-media" class="options">
+                <a href="#"><i class="bi bi-facebook"></i></a>
+                <a href="#"><i class="bi bi-instagram"></i></a>
+                <a href="#"><i class="bi bi-twitter"></i></a>
+                <a href="#"><i class="bi bi-youtube"></i></a>
+              </div>
+              <div class="col-md-3 options">
+                    <ul>
+                      <li>Audio and Subtitle</li>
+                      <li>Media Center</li>
+                      <li>Privacy</li>
+                      <li>Contact Us</li>
+                    </ul>
+              </div>
+              <div class="col-md-3 options">
+                <ul>
+                  <li>Audio description</li>
+                  <li>Investor Relation</li>
+                  <li>Terms and Conditions</li>
+                  <li>Legal Notices</li>
+                </ul>
+          </div>
+          <div class="col-md-3 options">
+            <ul>
+              <li>Help Center</li>
+              <li>Jobs</li>
+        
+            </ul>
+           </div>
+           <div class="col-md-3 options">
+            <ul>
+              <li>Gift card</li>
+              <li>Subscription</li>
+            </ul>
+           </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-10 mx-auto">
+          <div class="row">
+            <div class="col">
+              <p id="copy">Copyright © 2022 - Netflix clone with TMDB API made by Estefanía G.E. </p>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+  </footer>
+
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+<script src="js/app.js"></script>
+<script src="js/login.js"></script>
+
+</body>
+</html>

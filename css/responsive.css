@@ -1,0 +1,97 @@
+/* Responsive design*/
+@media screen and (max-width: 994px) {
+    #form {
+        background-image: none;
+        background-color: #000000;
+    }
+    .formulario {
+        min-width: 100%;
+        background-color: #00000000;
+        margin-top: -2rem !important;
+    }
+    #logo-login svg {
+        width: 100px;
+        margin-top: 20px;
+        margin-left: 20px;
+    }
+    #incorrectos .alert-light {
+        width: 267px;
+        margin-top: 212px;
+    }
+    /* header y nav */
+    #navbar-netflix {
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+    }
+    .navbar{
+       padding-top: unset !important;
+       padding-bottom: unset !important;
+    }
+    .navbar-brand{
+        margin-right: 0;
+    }
+    .dropdown-netflix-a{
+        display: block;
+        margin-right: 15px;
+        margin-left: 15px;
+    }
+    .logo-responsive{
+        display: block;
+    }
+    .logo-normal,
+    .nav-netflix{
+        display: none !important;
+    }
+    /* HOME - Video - Netflix Teaser */
+    .netflix-home {
+        min-height: 355px;
+    }
+    .carousel-caption {
+        text-align: left;
+        bottom: 60px;
+    }
+    .netflix-home .carousel-item .titulo {
+        font-size: 18px !important;
+        max-width: 100%;
+    }
+    .netflix-home .carousel-item .description {
+        font-size: 12px !important;
+        max-width: 100%;
+    }
+    .carousel-item img{
+        width: 100%;
+        height: 350px;
+    }
+.netflix-home .contLeft{
+    margin-left: 70px !important;
+}
+.contLeft button{
+    font-size: 12px !important;
+    width: max-content !important;
+    opacity: 0.9;
+}
+/* Carousel Netflix - Géneros de Películas (TMDB) */
+.genre {
+    font-size: 20px !important;
+    margin-left: 20px !important;
+}
+/* DETALLES DE LA PELICULA */
+.poster {
+    display: flex;
+    justify-content: center;
+}
+.nombrePelicula h2 {
+    text-align: center;
+}
+.container-a{
+    margin-top: 14.5px !important;
+    margin-bottom: 35px !important;    
+}
+/* Footer de Netflix */
+#logos i{
+    font-size: 150%;
+}
+.options {
+    margin-left: 40px !important;
+}
+}

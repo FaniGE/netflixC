@@ -1,0 +1,562 @@
+body {
+    background-color:#141414;
+    height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+    position: relative;
+}
+/* INICIO DE SESIÓN */
+#logo-login svg{
+    width: 167px;
+    height: 45px;
+    margin-top: 24px;
+    margin-left: 3%;
+    fill: #E50914;
+}
+#form {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.659), rgba(0, 0, 0, 0.416)) , url(../img/background_login.jpg);
+}
+.formulario {
+    min-height: 515px;
+    background-color: rgba(0,0,0,.75);    
+    border-radius: 4px;
+    padding: 60px 68px 40px;
+    width: 450px;
+    margin-top: 50px;
+}
+.formulario .title-SignIn{
+    margin-bottom: 28px;
+    font-size: 2rem;
+    font-weight: 700;
+}
+#nombre,
+#password {
+    height: 50px;
+    background-color: #333;
+    border: 0;
+    border-radius: 4px;
+    color: #fff;
+    line-height: 50px;
+    padding: 20px 16px;
+}
+#send {
+    background-color: #e50914;
+    height: 50px;
+    font-weight: 700;
+    margin: 24px 0 12px;
+}
+#incorrectos .alert-light {
+    font-size: 15px;
+    color: #786f24;
+    font-weight: bold;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    width: 310px;
+    margin: 295px auto;
+}
+
+
+/* HEADER Y NAV */
+#navbar-netflix {
+    background-color: #000000b2;
+    width: 100vw;
+    height: 65px;
+    position: fixed;
+    z-index: 1000;
+    transition: background 0.2s linear;
+    padding-left: 3.5625rem;
+    padding-right: 3.5625rem;
+}
+#logotipo {
+    width: 11.25rem; 
+    position: sticky;
+}
+.navbar-brand img {
+    height: 50px;
+}
+.netflix-row {
+    width: 100%;
+    display: flex;
+    justify-content: space-between !important;
+    align-items: center;
+}
+.netflix-row .right {
+    width: max-content
+}
+.netflix-row .left {
+    width: max-content
+}
+.dropdown-netflix-a,
+.logo-responsive {
+    display: none;
+}
+.dropdown-netflix-b {
+    background-color: transparent;
+    color: #ffffff;
+    border: none;
+    font-size: 14px !important;
+}
+.dropdown-netflix-a .dropdown-menu {
+    background-color: rgba(0, 0, 0, 0.738);
+    font-size: 9px !important;
+    color: #ffffff !important;
+    margin-left: -60px;
+    border-top: 3px solid #fff;
+    margin-top: 30px;
+}
+.dropdown-netflix-a .dropdown-menu .dropdown-item {
+    color: rgba(255, 255, 255, 0.646);
+    text-align: center;
+    width: 250px;
+    font-size: 1rem;
+    padding: 0.625rem 1.25rem;
+}
+.dropdown-netflix-a .dropdown-menu .dropdown-item:hover {
+    background-color: rgba(0, 0, 0, 0.133);
+    color: #ffffff;
+}
+.right .bi-bell-fill {
+    color: #ffffff;
+    margin: 0 15px 0 16px;
+}
+#profile-netflix {
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: gray;
+    border-radius: 0.3125rem;
+    cursor: pointer;
+}
+/* cerrar sesión */
+.profile-close {
+    border: 0;
+    padding: 0;
+    width: 70%;
+}
+.dropdown-menu {
+    background-color: #00000000;
+    border: 0;
+    padding-top: 10px;
+}
+.dropdown-menu button {
+    position: absolute;
+    right: 75%;
+    width: 150px;
+}
+.btn-danger:hover {
+    background-color: rgb(0, 0, 0);
+}
+/* menu - navbar */
+.nav-netflix {
+    display: block ;
+    align-items: center;
+}
+.nav-netflix button,
+.nav-netflix .btn {
+    background-color: transparent;
+    color:rgba(255, 255, 255, 0.619);
+    border: none;
+    font-size: 14px;
+}
+.nav-netflix button:hover,
+.nav-netflix .btn:hover {
+    color:#ffffff;
+}
+
+
+/* HOME - SLIDERS*/
+.netflix-home {
+    min-height: 700px;
+	font-size: 16px;
+}
+.carousel-item::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: #000000;
+    opacity: 0.5;
+}
+.carousel-caption {
+    text-align: left;
+    bottom: 180px;
+}
+.carousel-caption .titulo {
+    font-weight: 600;
+	font-size: 3.10rem;
+    max-width: 65%;
+    text-shadow: 0 0 8px rgba(0, 0, 0, 0.);
+}
+.carousel-caption .description {
+    font-weight: normal;
+	font-size: 1.2rem;
+    max-width: 50%;
+    text-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.);
+}
+
+.netflix-home #carouselExampleControls{
+    margin: 0 auto;
+	margin-bottom: 1.5rem;
+}
+.carousel-item img {
+    height: 700px;
+}
+.netflix-home .contLeft{
+    position: absolute;
+    top: 75%;
+    width: 100%;
+}
+.netflix-home .contLeft{
+    margin-left: 220px;
+}
+.contLeft button {
+    font-size: 1.125rem;
+}
+
+
+/* CONTENIDO - GÉNEROS DE PELÍCULAS (TMDB)*/
+.genre {
+    font-size: 25px;
+    color:#ffffff;
+    margin: 25px;
+    padding: 0.5px;
+}
+.carousel-container {
+    width: 100%;
+    height: 270px;
+    position: relative;
+}
+.carousel-container .arrowLeft,
+.carousel-container .arrowRight {
+    width: 3.4375rem;
+    height: 100%;
+    line-height: 250px;
+    font-size: 25px;
+    color: #000000;
+    font-weight: bold;
+    text-align: center;
+    top: 0;
+    z-index: 3;
+    cursor: pointer;
+}
+.carousel-container .arrowLeft {
+    position: absolute;
+    left: 1%;
+}
+.carousel-container .arrowRight {
+    position: absolute;
+    right: 1%;
+}
+.carousel-container .enlace {
+    background-color:#141414;
+}
+.carousel-container a{
+background-color: rgba(255, 255, 255, 0.935);
+}
+.carousel-container a:hover {
+    background-color: #0000003f;
+    color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.546), 0 0 10px rgba(255, 253, 253, 0.369), 0 0 10px rgba(255, 253, 253, 0.369);
+}
+
+
+/* CARDS DE PELÍCULAS */
+.movies {
+    margin-bottom: 60px;
+}
+.carouselbox{
+    height:250px;
+    width: auto;
+    overflow: hidden;
+    white-space: nowrap;
+    display: inline-block;
+    text-align: center;
+    padding-bottom: 10px !important;
+    display: flex; 
+    align-items: center;
+}
+.carouselbox .card{
+    min-width: 147px;
+    max-width: 147px;
+    height: 200px;
+    background-size: cover;
+    background-color: rgb(13, 17, 13);
+    margin: 5px 10px;
+    cursor: pointer;
+    transition: 0.5s ease;
+    z-index: 2;
+}
+.carouselbox .card:hover{
+    transform: scaleX(1.1) scaleY(1.1);
+    z-index: 10;
+}
+.card-body {
+    display: none;
+    padding: 10px 15px;
+    position: absolute;
+    background-color: #000000;
+    color: #ffffff;
+    top: 150px;
+    width: 100%;
+}
+.card-body h5,
+.card-body p {
+    font-size: 15px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.carouselbox .card:hover >.card-body{
+    display: block;
+}
+.enlace {
+    background-color: #000000;
+}
+
+
+/* AVISO DE BÚSQUEDA */
+.alert-danger {
+    font-size: 25px;
+    font-weight: bold;
+    margin-left: 100px;
+    margin-right: 100px;
+    padding-top: 150px;
+    padding-bottom: 150px
+}
+
+
+/* DETALLES DE LA PELÍCULA */
+#info-pelicula {
+    color: #ffffff;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background-color: #0d1117;
+}
+.poster img {
+    width: 300px;
+    height: 450px;
+}
+.genres a{
+    color: #ffffff;
+    text-decoration: none;
+}
+.genres a:hover{
+    color: #ff4242;
+}
+span.certification {
+    border: 1px solid rgba(255,255,255,0.6);
+    color: rgba(255,255,255,0.6);
+}
+
+.informacion .frase {
+    margin-bottom: 0;
+    font-size: 1.1em;
+    font-weight: 400;
+    font-style: italic;
+    opacity: 0.7;
+}
+.informacion .vistaGeneral {
+    width: 100%;
+    margin: 10px 0 8px;
+    font-weight: 600;
+    font-size: 1.3rem;
+}
+.people li {
+    list-style-type: none;
+    list-style-position: inside;
+} 
+.profile a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 600;
+}
+.profile .character {
+    color: #ffffffb6;
+    font-size: .8em;
+}
+.profile a:hover {
+    color: #42d6fb;
+}
+ol, ul {
+    padding: 0;
+}
+.profile p {
+    margin-bottom: 0px;
+}
+.profile .character {
+    margin-bottom: 18px;
+}
+.profile img {
+    max-width: 20%;
+    max-height: 20%;
+   }
+/* detalles de la pelicula - porcentaje*/
+.circular-progress .puntuacion{
+    position: absolute;
+    top: 35%;
+    left: 120%;
+    width: max-content;
+    font-size: 15px;
+    color: #ffffff;
+    font-weight: 600;
+}
+.circular-progress {
+    position: relative;
+    height: 80px;
+    width: 80px;
+    left: 2%;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.circular-progress:before {
+    content: "";
+    position: absolute;
+    height: 84%;
+    width: 84%;
+    background-color: #ffffff;
+    border-radius: 60%;
+}
+.puntuacion {
+    color: #ffffff;
+}
+.value-container {
+    position: relative;
+    font-family: "Poppins", sans-serif;
+    font-size: 15px;
+    color: #231c3d;
+}
+/* DETALLES DE LA PELICULA - REPARTO PRINCIPAL */
+#panelReparto {
+    background-color: #ffffff;
+    padding-top: 20px;
+    padding-bottom: 50px;
+}
+.tituloReparto {
+    font-size: 1.4em;
+    margin-bottom: 20px;
+}
+.actores{
+    box-shadow: 0 2px 8pxrgba(0,0,0,0.1);
+    border: 1px solid rgba(227,227,227, 1);
+    background-color: #fff;
+}
+.actores img {
+    min-width: 140px;
+    width: 140px;
+    height : 180px;
+}
+.reparto li {
+    list-style-type: none;
+    list-style-position: inside;
+    min-width: 140px;
+    width: 140px;
+    background-color: #fff;
+    margin-right: 10px;
+}
+.reparto .actores {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    margin-right: 4px;
+    border: 1px solid rgba(227,227,227, 1);
+    padding-bottom: 10px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+.reparto.scroller {
+    -webkit-overflow-scrolling: touch;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    margin-left: -10px;
+    margin-top: -10px;
+    padding-bottom: 10px;
+}
+.reparto {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+.reparto li p {
+    padding: 0 10px;
+}
+.actores a{
+    text-decoration: none;
+    font-weight: bold;
+    color: #000;
+}
+.actores a:hover, 
+.view-more a:hover {
+    color: #4d4b4b;
+}
+.reparto .actores p {
+    padding-top: 10px;
+    margin-bottom: 0;
+}
+.view-more {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    margin: 0;
+    padding: 0;
+}
+.view-more a{
+    text-decoration: none;
+    font-weight: bold;
+    color: #000;
+}
+
+
+/* Boton de regreso - peliculas del actor... */
+#regresar {
+    background-color: #E50914;
+    font-weight: bold;
+    color: #ffffff;
+}
+#regresar:hover {
+    background-color: #011e61;
+    color: #ffffff;
+}
+
+/* FOOTER DE NETFLIX */
+footer {
+    margin-top: 150px;
+}
+#social-media i{
+    font-size: 150%;
+    color: #888787;
+    margin-left: 0.1875rem;
+    margin-right: 0.75rem;
+}
+#social-media .bi-facebook:hover{
+    color:#3b5998;
+}
+#social-media .bi-instagram:hover{
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+#social-media .bi-twitter:hover{
+    color:#00acee;
+}
+#social-media .bi-youtube:hover{
+    color: #c4302b;
+}
+.options li {
+    color: #888787;
+    list-style: none;
+    cursor: pointer;
+}
+.options li:hover {
+    color:#ffffff;
+}
+#copy {
+    color: #888787;
+    margin-bottom: 80px;
+}
